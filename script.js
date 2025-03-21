@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            document.querySelector(".nav-link.active").classList.remove("active");
+            this.classList.add("active");
+        });
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".navbar ul");
+    menuToggle.addEventListener("click", function() {
+        navMenu.classList.toggle("show");
+    });
+});
+
+
 // Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -54,7 +71,6 @@ setInterval(() => {
 // Initialize the first position
 updateSliderPosition();
 
-// script.js
 
 // Get DOM elements
 const chatIcon = document.getElementById('chat-icon');
@@ -66,7 +82,7 @@ const messagesContainer = document.getElementById('messages');
 // Open the chat popup
 chatIcon.addEventListener('click', () => {
     chatPopup.style.display = 'block';
-    chatInput.focus(); // Auto-focus the input when chat opens
+    chatInput.focus();
 });
 
 // Close the chat popup
@@ -95,6 +111,6 @@ function displayMessage(message, sender) {
     messageDiv.classList.add(sender);
     messageDiv.textContent = message;
     messagesContainer.appendChild(messageDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to latest message
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
