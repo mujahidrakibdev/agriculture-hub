@@ -26,6 +26,10 @@ header {
     z-index: 100;
 }
 
+img{
+    width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -60,18 +64,80 @@ nav {
 }
 
 /* Hero Section */
-.hero-section {
-    background: url('image/hero-bg.webp') no-repeat center center/cover;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    background-position: center center;
-    background-size: cover;
-    height: calc(100vh - 75px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.overlay h1{
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem;
+    color: #60f367;
 }
+.overlay h3{
+    font-size: 1rem !important;
+    margin-bottom: 1rem;
+}
+.overlay p{
+    font-size: .75rem !important;
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100% !important;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .cta-button {
     background-color: #FFC107;
@@ -80,12 +146,39 @@ nav {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #FF9800;
+    background-color: #4CAF50;
     transform: scale(1.05);
     transition: all 0.3s ease;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Section Styles */
@@ -95,7 +188,7 @@ nav {
 }
 
 .guide-categories button,
-.pest-tabs .tab {
+.tab {
     background-color: #FFC107;
     border: none;
     padding: 10px 20px;
@@ -110,7 +203,39 @@ nav {
     background-color: #FF9800;
 }
 
+.guide-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.view-guide{
+    background-color: #4CAF50;
+    border: none;
+    font-weight: bold;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+.guide-item img{
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.guide-item:hover img {
+    transform: scale(1.05);
+}
+
 /* Crop Grid */
+.crop-heading,
+.guide-heading,
+.pest-heading{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
 .crop-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,15 +243,53 @@ nav {
     justify-items: center;
 }
 
+.crop-item {
+    margin-bottom: 2rem;
+}
 .crop-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s;
+    aspect-ratio: 2/1;
 }
 
 .crop-item:hover img {
     transform: scale(1.05);
+}
+
+/* pest control */
+
+.pest-tabs{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+}
+
+.tab-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tab-down div{
+    width: 50%;
+}
+
+.pest-cont{
+    text-align: left;
+}
+.pest-cont p{
+    margin-bottom: .5rem;
+}
+.pest-cont ol{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pest-ctrl{
+    border-radius: 8px;
 }
 
 /* Contact Form */
@@ -163,4 +326,112 @@ footer {
     padding: 20px 0;
     background-color: #5D4037;
     color: white;
+}
+
+.chat-icon{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.hero-image{
+    height: 300px;
+}
+
+/* styles.css */
+
+/* Chat Icon Styling */
+.chat-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.chat-icon:hover {
+    background-color: #45a049;
+}
+
+/* Chat Popup Styling */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.chat-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.messages {
+    margin-bottom: 10px;
+}
+
+.messages .message {
+    padding: 8px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.messages .message.user {
+    background-color: #e0f7fa;
+    align-self: flex-end;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
 }
