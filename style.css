@@ -9,6 +9,9 @@
 body {
     background-color: #F5F5DC;
     color: #333;
+
+}
+section {
     line-height: 1.6;
 }
 
@@ -27,7 +30,7 @@ img{
     justify-content: space-between;
     align-items: center;
     background: #4CAF50;
-    padding: 15px 40px;
+    padding: 5px 40px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -36,9 +39,10 @@ img{
     z-index: 1000;
 }
 .logo {
-    font-size: 24px;
     font-weight: bold;
     color: #fff;
+    width: 50px;
+    height: 50px;
 }
 .navbar ul {
     list-style: none;
@@ -63,6 +67,7 @@ img{
 .nav-link.active {
     background: #FFC107;
     color: #333;
+    font-weight: bold;
 }
 .menu-toggle {
     display: none;
@@ -77,24 +82,9 @@ img{
 
 
 /* Hero Section */
-
-.overlay h1{
-    font-size: 1.75rem !important;
-    margin-bottom: 1rem;
-    color: #60f367;
+.hero-section{
+    margin-top: 60px;
 }
-.overlay h3{
-    font-size: 1rem !important;
-    margin-bottom: 1rem;
-}
-.overlay p{
-    font-size: .75rem !important;
-    margin-bottom: 3rem;
-}
-
-
-
-
 
 .slider-container {
     position: relative;
@@ -107,7 +97,6 @@ img{
 .slider {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100% !important;
 }
 
 .slide {
@@ -133,27 +122,23 @@ img{
     z-index: 10;
 }
 
-.overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.overlay h1{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #60f367;
 }
-
-.overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.overlay p {
+.overlay h3{
     font-size: 1rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.overlay p{
+    font-size: .75rem;
+    margin-bottom: 3rem;
 }
 
 
 .cta-button {
-    background-color: #FFC107;
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -164,7 +149,7 @@ img{
 }
 
 .cta-button:hover {
-    background-color: #4CAF50;
+    background-color: #FFC107;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
@@ -176,14 +161,15 @@ img{
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px;
+    border-radius: 50%;
+    padding: 15px 25px;
     cursor: pointer;
     font-size: 20px;
     z-index: 100;
 }
 
 .prev {
-    left: 10px;
+    left: 5px;
 }
 
 .next {
@@ -200,7 +186,6 @@ img{
     text-align: center;
 }
 
-.guide-categories button,
 .tab {
     background-color: #FFC107;
     border: none;
@@ -211,7 +196,6 @@ img{
     transition: background-color 0.3s;
 }
 
-.guide-categories button:hover,
 .pest-tabs .tab:hover {
     background-color: #FF9800;
 }
@@ -223,29 +207,34 @@ img{
     justify-items: center;
 }
 
+
 .view-guide{
     background-color: #4CAF50;
     border: none;
     font-weight: bold;
     color: white;
-    padding: .5rem 1rem;
+    padding: .75rem 1rem;
     border-radius: .5rem;
     margin-top: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
-.guide-item img{
+.guide-img {
     border-radius: 8px;
     transition: transform 0.3s;
+    box-shadow: 4px 4px 6px -1px rgba(0,0,0,0.5);
 }
 
-.guide-item:hover img {
+.guide-img:hover {
     transform: scale(1.05);
 }
 
 /* Crop Grid */
 .crop-heading,
 .guide-heading,
-.pest-heading{
+.pest-heading,
+.contact-header{
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -259,15 +248,16 @@ img{
 .crop-item {
     margin-bottom: 2rem;
 }
-.crop-item img {
+.crop-img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s;
     aspect-ratio: 2/1;
+    box-shadow: 4px 4px 6px -1px rgba(0,0,0,0.5);
 }
 
-.crop-item:hover img {
+.crop-img:hover {
     transform: scale(1.05);
 }
 
@@ -306,11 +296,16 @@ img{
 }
 
 /* Contact Form */
+
+.contact-header{
+    text-align: center;
+}
 form {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 form input, form select, form textarea {
@@ -341,6 +336,8 @@ footer {
     color: white;
 }
 
+/* Chat Icon Styling */
+
 .chat-icon{
     position: fixed;
     bottom: 0;
@@ -351,12 +348,10 @@ footer {
 }
 
 .hero-image{
-    height: 300px;
+    height: 400px;
+    object-fit: cover;
 }
 
-/* styles.css */
-
-/* Chat Icon Styling */
 .chat-icon {
     position: fixed;
     bottom: 30px;
@@ -444,7 +439,8 @@ input[type="text"] {
     font-size: 14px;
 }
 
-input[type="text"]:focus {
+input:focus,
+textarea:focus {
     border-color: #4CAF50;
     outline: none;
 }

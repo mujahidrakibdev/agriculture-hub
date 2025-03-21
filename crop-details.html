@@ -9,19 +9,20 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo" >
+        </div>
         <nav>
-            <div class="logo">
-                <img src="image/logo.png" alt="logo" >
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="farming-guides.html">Farming Guides</a></li>
-                <li><a href="crop-details.html">Crop Details</a></li>
-                <li><a href="pest-control.html">Pest Control</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="farming-guides.html" class="nav-link">Farming Guides</a></li>
+                <li><a href="crop-details.html" class="nav-link active">Crop Details</a></li>
+                <li><a href="pest-control.html" class="nav-link">Pest Control</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">☰</div>
     </header>
     
     <!-- Homepage Hero Section -->
@@ -36,36 +37,35 @@
         <h2 class="crop-heading">Crop Details</h2>
         <div class="crop-grid">
             <div class="crop-item">
-                <img src="image/crop-1.jpg" alt="Crop Image">
+                <img src="image/crop-1.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
             <div class="crop-item">
-                <img src="image/crop-2.jpg" alt="Crop Image">
+                <img src="image/crop-2.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
             <div class="crop-item">
-                <img src="image/crop-3.jpg" alt="Crop Image">
+                <img src="image/crop-3.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
             <div class="crop-item">
-                <img src="image/crop-4.jpg" alt="Crop Image">
+                <img src="image/crop-4.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
             <div class="crop-item">
-                <img src="image/crop-5.jpg" alt="Crop Image">
+                <img src="image/crop-5.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
             <div class="crop-item">
-                <img src="image/crop-6.jpg" alt="Crop Image">
+                <img src="image/crop-6.jpg" alt="Crop Image" class="crop-img">
                 <h3>Grains</h3>
                 <p>Details about grain cultivation.Details about grain cultivation.Details about grain cultivation.</p>
             </div>
-            <!-- Repeat crop items here -->
         </div>
     </section>
     

@@ -9,22 +9,28 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo" >
+        </div>
         <nav>
-            <div class="logo">
-                <img src="image/logo.png" alt="logo" >
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="farming-guides.html">Farming Guides</a></li>
-                <li><a href="crop-details.html">Crop Details</a></li>
-                <li><a href="pest-control.html">Pest Control</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="farming-guides.html" class="nav-link">Farming Guides</a></li>
+                <li><a href="crop-details.html" class="nav-link">Crop Details</a></li>
+                <li><a href="pest-control.html" class="nav-link">Pest Control</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">☰</div>
     </header>
     
     <!-- Homepage Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="slider-container">
+            <img src="image/slide-3.jpg" alt="" class="hero-image">
+        </div>
+    </section>
     
     
     <!-- Contact Form Section -->
