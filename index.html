@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agricultural Information Hub - A comprehensive resource for farmers and agriculture enthusiasts.">
+    <title>Agricultural Information Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image/logo.png" alt="logo" >
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#farming-guides">Farming Guides</a></li>
+                <li><a href="#crop-details">Crop Details</a></li>
+                <li><a href="#pest-control">Pest Control</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Homepage Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to the Agricultural Information Hub</h1>
+            <h3>Your ultimate guide to farming, crop cultivation, and sustainable practices</h3>
+            <p>A brief intro about the importance of agriculture for food security, sustainability, and the economy.</p>
+            <a href="#farming-guides" class="cta-button">Explore Farming Guides</a>
+        </div>
+    </section>
+
+    <!-- Farming Guides Section -->
+    <section id="farming-guides" class="section">
+        <h2>Farming Guides</h2>
+        <div class="guide-categories">
+            <button>All</button>
+            <button>Organic</button>
+            <button>Traditional</button>
+        </div>
+        <div class="guide-list">
+            <div class="guide-item">
+                <h3>How to Grow Organic Tomatoes</h3>
+                <p>Step-by-step instructions on growing organic tomatoes in your garden.</p>
+                <button class="view-guide">View Guide</button>
+            </div>
+            <!-- Repeat guide items here -->
+        </div>
+    </section>
+
+    <!-- Crop Details Section -->
+    <section id="crop-details" class="section">
+        <h2>Crop Details</h2>
+        <div class="crop-grid">
+            <div class="crop-item">
+                <img src="crop1.jpg" alt="Crop Image">
+                <h3>Grains</h3>
+                <p>Details about grain cultivation.</p>
+            </div>
+            <!-- Repeat crop items here -->
+        </div>
+    </section>
+
+    <!-- Pest Control Section -->
+    <section id="pest-control" class="section">
+        <h2>Pest Control Strategies</h2>
+        <div class="pest-tabs">
+            <div class="tab">Preventive Measures</div>
+            <div class="tab">Biological Controls</div>
+            <div class="tab">Organic Remedies</div>
+        </div>
+        <div class="pest-info">
+            <p>Information on pest lifecycle and solutions.</p>
+            <!-- Pest control images and carousel -->
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="experience">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Expert</option>
+            </select>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="file" name="file-upload">
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Agriculture Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
